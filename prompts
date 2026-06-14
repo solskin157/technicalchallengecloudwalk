@@ -1,0 +1,227 @@
+# prompts_case_analysis.py
+
+# ============================================================
+
+# Prompt Library - Case Analysis
+
+# ============================================================
+
+# Este arquivo centraliza todos os prompts utilizados durante
+
+# a análise do case de recrutamento e seleção.
+
+#
+
+# Objetivos:
+
+# - Exploração e entendimento dos dados
+
+# - Identificação de padrões operacionais
+
+# - Descoberta de oportunidades de IA
+
+# - Construção de modelos preditivos
+
+# - Geração de recomendações executivas
+
+# ============================================================
+
+PROMPTS = {
+“case_context”: “””
+Você é um especialista em People Analytics, Talent Acquisition,
+Data Science e Inteligência Artificial aplicada a RH.
+
+```
+Analise o dataset fornecido e produza insights acionáveis para
+melhorar eficiência operacional, qualidade das contratações e
+experiência dos candidatos.
+
+Sempre apresente:
+- Principais descobertas
+- Evidências quantitativas
+- Impacto para o negócio
+- Recomendações práticas
+""",
+
+"eda_recruitment": """
+Realize uma análise exploratória completa do processo de recrutamento.
+
+Avalie:
+- Volume de candidatos
+- Taxas de conversão por etapa
+- Tempo médio de contratação
+- Distribuição por vaga
+- Distribuição por recrutador
+- Distribuição por canal de aquisição
+
+Identifique:
+- Gargalos do funil
+- Etapas com maior perda de candidatos
+- Possíveis inconsistências nos dados
+- Tendências relevantes
+
+Apresente tabelas, métricas e insights executivos.
+""",
+
+"recruiter_performance": """
+Analise a performance dos recrutadores.
+
+Considere:
+- Quantidade de candidatos processados
+- Taxa de contratação
+- Tempo médio de fechamento
+- Eficiência por vaga
+- Conversão entre etapas
+
+Identifique:
+- Melhores práticas
+- Diferenças de performance
+- Possíveis oportunidades de treinamento
+- Indicadores de produtividade
+
+Gere recomendações acionáveis.
+""",
+
+"source_channel_analysis": """
+Analise os canais de aquisição de candidatos.
+
+Avalie:
+- Volume gerado por canal
+- Taxa de contratação
+- Qualidade dos candidatos
+- Conversão por etapa
+- Eficiência relativa
+
+Identifique:
+- Canais mais eficientes
+- Canais com baixa performance
+- Oportunidades de otimização de investimento
+- Estratégias para aumentar conversão
+""",
+
+"hired_vs_rejected": """
+Compare candidatos contratados versus rejeitados.
+
+Analise:
+- Características demográficas
+- Experiência profissional
+- Formação acadêmica
+- Resultados em avaliações
+- Histórico do processo seletivo
+
+Identifique:
+- Principais fatores associados à contratação
+- Variáveis mais discriminantes
+- Possíveis vieses
+- Insights para melhoria do processo
+""",
+
+"ai_opportunities": """
+Com base na análise do processo de recrutamento,
+proponha oportunidades de aplicação de Inteligência Artificial.
+
+Para cada oportunidade apresente:
+- Problema atual
+- Solução baseada em IA
+- Benefícios esperados
+- Complexidade de implementação
+- Impacto potencial
+- Prioridade
+
+Considere casos como:
+- Triagem automática de currículos
+- Matching candidato-vaga
+- Predição de contratação
+- Assistentes para recrutadores
+- Automação de comunicação
+- Forecast de demanda de contratação
+""",
+
+"predictive_hiring_model": """
+Desenvolva uma estratégia para criar um modelo preditivo
+de probabilidade de contratação.
+
+Explique:
+- Variável alvo
+- Features candidatas
+- Tratamento dos dados
+- Engenharia de atributos
+- Algoritmos recomendados
+- Estratégia de validação
+- Métricas de avaliação
+
+Discuta riscos de viés e interpretabilidade.
+""",
+
+"candidate_scoring": """
+Proponha um sistema de scoring para candidatos.
+
+O sistema deve:
+- Priorizar candidatos com maior potencial
+- Ser interpretável
+- Reduzir subjetividade
+- Apoiar recrutadores na tomada de decisão
+
+Explique:
+- Critérios utilizados
+- Fórmula de pontuação
+- Processo de validação
+- Limitações
+""",
+
+"executive_summary": """
+Gere um resumo executivo para liderança.
+
+Estruture em:
+
+1. Visão Geral
+2. Principais Descobertas
+3. Gargalos Identificados
+4. Oportunidades de Melhoria
+5. Casos de Uso de IA
+6. Próximos Passos
+
+O texto deve ser objetivo, estratégico e orientado a negócio.
+""",
+
+"final_recommendations": """
+Com base em toda a análise realizada, apresente um plano de ação.
+
+Organize em:
+- Quick Wins (0-3 meses)
+- Médio Prazo (3-6 meses)
+- Longo Prazo (6-12 meses)
+
+Para cada iniciativa informe:
+- Objetivo
+- Benefício esperado
+- Esforço estimado
+- Impacto esperado
+- Prioridade
+"""
+```
+
+}
+
+def get_prompt(prompt_name: str) -> str:
+“””
+Retorna um prompt específico pelo nome.
+“””
+return PROMPTS.get(prompt_name, “Prompt não encontrado.”)
+
+def list_prompts():
+“””
+Lista todos os prompts disponíveis.
+“””
+return list(PROMPTS.keys())
+
+if **name** == “**main**”:
+print(”=== PROMPTS DISPONÍVEIS ===\n”)
+
+```
+for prompt_name in PROMPTS:
+    print(f"- {prompt_name}")
+
+print("\n=== EXEMPLO ===\n")
+print(get_prompt("eda_recruitment"))
+```
